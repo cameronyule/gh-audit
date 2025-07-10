@@ -181,7 +181,7 @@ wheels = [
 [[package]]
 name = "gh-audit"
 version = "0.1.3"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "click" },
     { name = "pygithub" },

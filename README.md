@@ -1,17 +1,13 @@
 # gh-audit
 
-Personal GitHub repository meta linting tool for consistent configuration. Probably not interesting to you.
-
-## Installation
-
-```sh
-$ pip install git+https://github.com/josh/gh-audit.git
-```
+Personal GitHub repository meta linting tool for consistent configuration.
 
 ## Usage
 
 ```sh
-$ gh-audit --help
+$ nix develop
+
+$ uv run gh-audit --help
 Usage: gh-audit [OPTIONS] [REPOSITORY]...
 
 Options:
@@ -22,20 +18,4 @@ Options:
   --format [repo|rule]  [required]
   --version             Show the version and exit.
   --help                Show this message and exit.
-```
-
-## Development
-
-To contribute to this tool, first checkout the code. Then create a new virtual environment:
-
-```sh
-cd gh-audit
-uv venv
-source .venv/bin/activate
-```
-
-Now install the dependencies and test dependencies:
-
-```sh
-uv sync
 ```

@@ -27,15 +27,10 @@
               ))
             ];
             shellHook = ''
-              # https://nixos.wiki/wiki/Python#uv
-
-              # We will manage Python interpreters via Nix.
-              export UV_PYTHON_DOWNLOADS="never"
-              # Ensure uv respects the devShell's Python.
-              export UV_PYTHON="$(which python)"
-
-              # Activate the virtual environment
-              source ./.venv/bin/activate
+            export UV_PYTHON_PREFERENCE="only-system"
+            export UV_PYTHON=${pkgs.python313}
+            uv venv --allow-existing .venv
+            source .venv/bin/activate
             '';
           };
 
